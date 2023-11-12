@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <link rel="javas" href="">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">  <script>
+  jQuery(document).ready(function() {
+    function count($this){
+      var current = parseInt($this.html(), 10);
+      current = current + 1; /* Where 1 is increment */
+  
+      $this.html(++current);
+      if(current > $this.data('count')){
+        $this.html($this.data('count'));
+      } else {
+        setTimeout(function(){count($this)}, 50);
+      }
+    }
+  
+    jQuery(".stat-count").each(function() {
+      jQuery(this).data('count', parseInt(jQuery(this).html(), 10));
+      jQuery(this).html('0');
+      count(jQuery(this));
+    });
+  });</script>
+  <title>FUNCIONES DE VARIAS VARIABLES</title>
+  <link rel="stylesheet" href="estilos.css">
+  <meta charset="UTF-8">
+</head>
+<body class="bg-dark">
+
+  <nav class="navbar navbar-expand-lg bg-dark  navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="Imagen1.png" id="nav-logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#introduccion">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#tribute-data">Teoría</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#ejercicios">Conclusión</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index 3.html">Ejercicios resueltos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Música
+            </a>
+            <ul class="dropdown-menu">
+              <!-- Content -->
+              <div class="container d-flex justify-content-center my-4 mb-5">
+                <div id="mobile-box">
+                  <!-- Card -->
+                  <div class="card">
+                    <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                      <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/2108/2108423.png"
+                        alt="Card image cap">
+                      <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                      </a>
+                    </div>
+                    <div class="card-body text-center">
+
+                      <h5 class="h5 font-weight-bold"><a href="#" target="_blank">Piano Tenue</a></h5>
+                      <p class="mb-0">Música Rejalante</p>
+
+                      <audio id="music" preload="true">
+                        <source src="relajante1.mp3">controls
+                      </audio>
+                      <div id="audioplayer">
+                        <i id="pButton" class="fas fa-play"></i>
+                        <div id="timeline">
+                          <div id="playhead"></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- Card -->
+                </div>
+              </div>
+              <audio src="relajante1.mp3" controls></audio>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="stat">
+    <span class="stat-count">0</span>
+    <p style="position:flex;" class="stat-detail">Visitantes</p>
+</div>  
+
+  <main class="container mt-5">
+    <section class="container-fluid my-5 d-flex flex-column align-items-center" id="introduccion">
+      <h1 class="text-center my-5">FUNCIONES DE VARIAS VARIABLES</h1> 
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ut_iqneq8EA?si=egbLI1YdjJF5NBXe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>      
+      <p>    Para más información,  
+        <a id="tribute-link" href="https://es.khanacademy.org/math/multivariable-calculus/thinking-about-multivariable-function/ways-to-represent-multivariable-functions/a/multivariable-functions#:~:text=Una%20función%20se%20llama%20multivariable%20si%20su%20entrada%20consiste%20de%20varios%20números.&text=Si%20la%20salida%20de%20una,normalmente%20funciones%20con%20valores%20vectoriales."> 
+          <b>haga click aquí</b>
+        </a>para ir a ¿Qué son las funciones multivariable? en Khan Academy. </p> 
+      <h2>Introducción.</h2>
+      
+      <p class="lead, sangria">En esta página web, se explorarán las funciones de varias variables y su importancia en el campo de las matemáticas y la ciencia. Se analizará cómo estas funciones pueden modelar fenómenos del mundo real y cómo se pueden utilizar para resolver problemas complejos en diferentes disciplinas. Además, se examinarán las propiedades y características de las funciones de varias variables, así como las técnicas para su representación gráfica y su optimización. Esto proporcionará una visión general de las funciones de varias variables y su relevancia en la resolución de problemas en el ámbito académico y profesional.</p>
+    </section>
+    <section id="tribute-data">
+      <h1 class="title-APJ">
+        Sobre las Funciones de varias Variables.
+      </h1>
+      <h2>¿Cuál es su importancia?</h2>
+      <p class="sangria">Las funciones de varias variables son fundamentales en el campo de las matemáticas y la ciencia, ya que nos permiten modelar fenómenos del mundo real que involucran múltiples factores. Estas funciones son utilizadas en disciplinas como la física, la ingeniería, la economía, la biología y muchas otras, para resolver problemas complejos que no pueden ser abordados con funciones de una sola variable.
+      </p>
+
+      <p class="sangria">Por ejemplo, en física, estas funciones se utilizan para modelar el movimiento de partículas en un campo gravitatorio, el comportamiento de fluidos en un sistema, o la propagación de ondas en un medio. En ingeniería, se utilizan para diseñar estructuras que deben soportar diferentes cargas y fuerzas, o para optimizar procesos de producción y distribución. En economía, se utilizan para analizar el comportamiento de mercados y tomar decisiones sobre la asignación de recursos. En biología, se utilizan para modelar la interacción entre diferentes especies en un ecosistema, o para entender procesos bioquímicos complejos. En todos estos casos, las funciones de varias variables nos permiten tener en cuenta múltiples factores que interactúan entre sí, y nos proporcionan herramientas matemáticas para analizar y resolver problemas complejos. Esto incluye técnicas como la optimización, el cálculo de gradientes y puntos críticos, la integración sobre regiones tridimensionales, entre otras. En resumen, las funciones de varias variables son fundamentales para abordar situaciones del mundo real que involucran múltiples factores interrelacionados, y nos proporcionan las herramientas matemáticas necesarias para comprender y resolver estos problemas.
+      </p>
+      <img id ="centrar-imagen" src="https://aprendeconalf.es/docencia/calculo/manual/img/derivadasn/coordenadas3D.png" class="img-fluid my-5" alt="Ilustración de las partes de una circunferencia">
+      <img id ="centrar-imagen2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKmm-lTLhTHdXBtYS4fg5VsPuJ47eelFPayJKqAJ_L4EGQwuVG-dC9UL__E_N4C-9lrbQ&usqp=CAU" class="img-fluid my-5" alt="Ilustración de las partes de una circunferencia">
+      <p class="sangria">Las propiedades y características de las funciones de varias variables son objeto de estudio en matemáticas avanzadas, y su comprensión es esencial para poder utilizarlas de manera efectiva en la resolución de problemas. Por ejemplo, es importante entender conceptos como el gradiente, la matriz hessiana y los puntos críticos para poder optimizar una función de varias variables y encontrar máximos o mínimos.</p>
+      <p class="sangria">La representación gráfica de las funciones de varias variables también es crucial para comprender su comportamiento. A diferencia de las funciones de una sola variable, que pueden ser representadas en un plano cartesiano, las funciones de varias variables requieren representaciones tridimensionales o incluso en dimensiones superiores. Estas representaciones nos permiten visualizar cómo cambia la función en función de sus variables y son útiles para identificar patrones y tendencias.</p>
+
+      <br>
+      </div>
+
+      <iframe id="centrar" src="https://www.slideshare.net/slideshow/embed_code/key/iYrjBc0PRRvqlr?startSlide=16" width="597" height="486" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px;max-width: 100%;" allowfullscreen></iframe><div style="margin-bottom:5px"><strong><a href="https://es.slideshare.net/josegonzalez1606/funciones-de-varias-variables-198755826" title="Funciones de Varias Variables" target="_blank">Funciones de Varias Variables</a></strong> from <strong><a href="https://es.slideshare.net/josegonzalez1606" target="_blank">josegonzalez1606</a></strong></div>
+<img id="centrar-imagen" src="p1.jpg">
+<img id="centrar-imagen2" src="p2.jpg"
+  </section>
+    <section id="tribute-data"><h2 id="ejercicios" class="text-center my-5">Conclusión</h2><p class="sangria">
+      En resumen, las funciones de varias variables son una herramienta poderosa para modelar fenómenos del mundo real y resolver problemas complejos en diversas disciplinas. Su estudio es fundamental tanto en el ámbito académico como en el profesional, ya que nos proporciona las herramientas necesarias para comprender y analizar situaciones que involucran múltiples factores interrelacionados.</p></section>
+  </main>
+  <footer class="container-fluid d-flex justify-content-center mt-5 bg-dark pt-3">
+    <p> Hecho por @ <a href="#"> Andrés Osorio. C.I 30.919.870. Matemáticas III, en la sección S-02</a></p>
+   
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
